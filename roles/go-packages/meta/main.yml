@@ -1,0 +1,6 @@
+---
+dependencies:
+- role: suzuki-shunsuke.go-ubuntu
+  go_use_ppa: yes
+  go_upgrade: yes
+- suzuki-shunsuke.go-module

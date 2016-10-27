@@ -1,0 +1,6 @@
+- name: Install apt packages
+  apt:
+    name: "{{item}}"
+    update_cache: yes
+  become: "{{nonroot}}"
+  with_items: "{{apt_packages}}"

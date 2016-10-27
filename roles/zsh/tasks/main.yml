@@ -1,0 +1,10 @@
+- name: Install zsh
+  apt:
+    name: zsh
+    update_cache: yes
+  become: "{{nonroot}}"
+- name: Change the default shell to zsh
+  user:
+    name: "{{ansible_env.USER}}"
+    shell: "/usr/bin/zsh"
+  become: "{{nonroot}}"

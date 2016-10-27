@@ -1,0 +1,42 @@
+---
+- hosts: default
+  vars_files:
+  - group_vars/all.yml
+  roles:
+  - suzuki-shunsuke.go-module
+  - suzuki-shunsuke.ghq-module
+  - role: suzuki-shunsuke.git-ubuntu
+    git_use_ppa: yes
+    git_upgrade: yes
+  - role: suzuki-shunsuke.go-ubuntu
+    go_use_ppa: yes
+    go_upgrade: yes
+  - go-packages
+  - role: suzuki-shunsuke.vim-conf
+    remote_repository_path: suzuki-shunsuke/vim.conf
+  - role: suzuki-shunsuke.zsh-conf
+    remote_repository_path: suzuki-shunsuke/zsh.conf
+  - role: suzuki-shunsuke.zplug
+  - role: suzuki-shunsuke.tmux-conf
+    remote_repository_path: suzuki-shunsuke/tmux.conf
+  - role: suzuki-shunsuke.gitconfig
+    remote_repository_path: suzuki-shunsuke/git.conf
+  - apt-packages
+  - suzuki-shunsuke.gvm
+  - suzuki-shunsuke.gvm-dep-ubuntu
+  - suzuki-shunsuke.nodebrew
+  - suzuki-shunsuke.neobundle-vim
+  - suzuki-shunsuke.tmux-tpm
+  - suzuki-shunsuke.git-lfs-ubuntu
+  - role: suzuki-shunsuke.docker-ubuntu
+    docker_users:
+    - "{{ansible_env.USER}}"
+  - suzuki-shunsuke.docker-compose
+  - suzuki-shunsuke.pyenv-install-dep-ubuntu
+  - suzuki-shunsuke.pyenv
+  - suzuki-shunsuke.rbenv-install-dep-ubuntu
+  - suzuki-shunsuke.rbenv
+  - role: suzuki-shunsuke.colorrc
+    remote_repository_path: suzuki-shunsuke/colorrc.conf
+  - suzuki-shunsuke.lang-ja-ubuntu
+  - zsh

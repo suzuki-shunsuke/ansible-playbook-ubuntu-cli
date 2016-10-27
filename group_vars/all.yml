@@ -1,0 +1,3 @@
+---
+nonroot: "{{(ansible_env.HOME == '/root') | ternary('no', 'yes')}}"
+ghq_executable: "{{ansible_env.HOME}}/.go/bin/ghq"

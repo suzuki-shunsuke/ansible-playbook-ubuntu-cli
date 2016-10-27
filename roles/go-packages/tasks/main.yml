@@ -1,0 +1,7 @@
+---
+- name: Install go packages
+  go:
+    name: "{{item}}"
+  environment:
+    GOPATH: "{{ansible_env.HOME}}/.go"
+  with_items: "{{go_packages}}"

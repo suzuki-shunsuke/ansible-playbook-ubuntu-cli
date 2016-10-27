@@ -1,0 +1,31 @@
+---
+- name: Clear bash and zsh histories
+  copy:
+    dest: "{{item}}"
+    content: ""
+  with_items:
+  - "{{ansible_env.HOME}}/.bash_history"
+  - "{{ansible_env.HOME}}/.zsh_history"
+- name: Find ~/.vimundo/* to delete
+  find:
+    paths: "{{ansible_env.HOME}}/.vimundo"
+  register: vimundo
+- name: Delete vimundo
+  file:
+    state: absent
+    path: "{{item}}"
+  with_items: "{{vimundo}}"
+# https://github.com/ansible/ansible-modules-core/issues/4029
+# Error with module apt autoremove
+# - name: apt-get -y autoremove
+#   apt:
+#     autoremove: yes
+#   become: "{{nonroot}}"
+- name: Clean APT cache
+  file:
+    path: "{{item}}"
+    state: absent
+  with_items:
+  - /var/lib/apt/lists
+  - /var/cache/apt/archives
+  become: "{{nonroot}}"

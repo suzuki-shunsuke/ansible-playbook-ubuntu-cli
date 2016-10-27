@@ -1,0 +1,10 @@
+---
+apt_packages:
+- curl
+- wget
+- tmux
+- silversearcher-ag
+- tree
+- zip
+- zsh
+- vim-gnome
