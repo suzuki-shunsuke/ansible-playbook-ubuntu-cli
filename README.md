@@ -1,5 +1,7 @@
 # Ansible Playbook for Ubuntu CLI
 
+[![Build Status](https://travis-ci.org/suzuki-shunsuke/ansible-playbook-ubuntu-cli.svg?branch=master)](https://travis-ci.org/suzuki-shunsuke/ansible-playbook-ubuntu-cli)
+
 * 日本語対応
 * wget
 * curl
