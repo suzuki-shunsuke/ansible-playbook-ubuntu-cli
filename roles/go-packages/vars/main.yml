@@ -2,5 +2,4 @@
 go_packages:
 - github.com/github/hub
 - github.com/direnv/direnv
-# - github.com/junegunn/fzf
 - github.com/motemen/ghq

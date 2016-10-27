@@ -32,6 +32,7 @@
 * hub
 * direnv
 * ghq
+* fzf
 * colorrc
 
 ## Install Ansible roles dependencies
@@ -50,5 +51,4 @@ $ vagrant package
 
 ## TODO
 
-* install fzf
 * [apt-get autoremove](https://github.com/ansible/ansible-modules-core/issues/4029)

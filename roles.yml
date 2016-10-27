@@ -1,6 +1,7 @@
 - src: suzuki-shunsuke.colorrc
 - src: suzuki-shunsuke.docker-compose
 - src: suzuki-shunsuke.docker-ubuntu
+- src: suzuki-shunsuke.fzf
 - src: suzuki-shunsuke.ghq-module
 - src: suzuki-shunsuke.git-lfs-ubuntu
 - src: suzuki-shunsuke.git-ubuntu

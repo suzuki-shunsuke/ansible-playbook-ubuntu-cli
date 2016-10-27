@@ -40,3 +40,4 @@
     remote_repository_path: suzuki-shunsuke/colorrc.conf
   - suzuki-shunsuke.lang-ja-ubuntu
   - zsh
+  - suzuki-shunsuke.fzf
