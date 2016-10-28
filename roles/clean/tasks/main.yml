@@ -21,6 +21,9 @@
 #   apt:
 #     autoremove: yes
 #   become: "{{nonroot}}"
+- name: apt-get -y autoremove
+  command: apt-get -y autoremove
+  become: "{{nonroot}}"
 - name: Clean APT cache
   file:
     path: "{{item}}"

@@ -2,6 +2,10 @@
 - hosts: default
   vars_files:
   - group_vars/all.yml
+  pre_tasks:
+  - name: apt-get update
+    command: apt-get update
+    become: "{{nonroot}}"
   roles:
   - suzuki-shunsuke.go-module
   - suzuki-shunsuke.ghq-module
